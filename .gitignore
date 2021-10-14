@@ -1,0 +1,7 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/Console_1Excel/.vs/Console_1Excel
+/Console_1Excel/Console_1Excel/bin/Debug
+/Console_1Excel/Console_1Excel/obj
