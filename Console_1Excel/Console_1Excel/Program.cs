@@ -16,7 +16,7 @@ namespace Console_1Excel
                     package.Load(rute);
                 }
 
-                ExcelWorksheet cuentas = package.Workbook.Worksheets.First();
+                ExcelWorksheet cuentas = package.Workbook.Worksheets[0];
 
                 for (int row = 1; ; row++)
                 {
@@ -35,10 +35,12 @@ namespace Console_1Excel
                         string g_banco = cuentas.Cells[row, 6].Text;
 
                         Console.WriteLine("{0} - {1} - {2} - {3} - {4} - {5}", fecha, detalle, e_efectivo, g_efectivo, e_banco, g_banco);
+                       
                     }
                 }
+                Console.WriteLine("\n");
 
-                ExcelWorksheet cuentas_2 = package.Workbook.Worksheets.Last();
+                ExcelWorksheet cuentas_2 = package.Workbook.Worksheets[1];
                 for (int row = 1; ; row++)
                 {
                     string fecha = cuentas_2.Cells[row, 1].Text;
@@ -49,9 +51,10 @@ namespace Console_1Excel
                     }
                     else
                     {
-                        string detalle = cuentas_2.Cells[row, 2].Text;
+                        string lugar = cuentas_2.Cells[row, 2].Text;
+                        string ganancia = cuentas_2.Cells[row, 3].Text;
 
-                        Console.WriteLine("{0} - {1}", fecha, detalle);
+                        Console.WriteLine("{0} - {1} - {2}", fecha, lugar, ganancia);
                     }
                 }
 
